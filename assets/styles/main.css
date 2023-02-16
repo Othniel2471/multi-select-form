@@ -239,9 +239,9 @@ fieldset {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-.form {
-  /* background: pink; */
-}
+/* .form {
+  background: pink;
+} */
 .form-item {
   display: flex;
   flex-direction: column;
