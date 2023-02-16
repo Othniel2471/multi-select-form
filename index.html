@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <!-- js -->
+
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="steps">
+          <div class="step-one active" id="step-one">1</div>
+          <div class="text">
+            <p class="step-text">step1</p>
+            <p class="step-info">your info</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step-one" id="step-two">2</div>
+          <div class="text">
+            <p class="step-text">step 2</p>
+            <p class="step-info">select plan</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step-one" id="step-three">3</div>
+          <div class="text">
+            <p class="step-text">step 3</p>
+            <p class="step-info">add-ons</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step-one" id="step-four">4</div>
+          <div class="text">
+            <p class="step-text">step 4</p>
+            <p class="step-info">summary</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="">
+          <fieldset class="personal-info">
+            <h1 class="headers">Personal info</h1>
+            <p>Please provide your name, email address and phone number.</p>
+            <div class="form-item">
+              <label for="">name</label>
+              <input
+                type="text"
+                class="name inputs"
+                placeholder="e.g. Othniel Omaidu"
+              />
+
+              <label for="">email</label>
+              <input
+                type="email"
+                class="email inputs"
+                placeholder="e.g. name@gmail.com"
+              />
+
+              <label for="">phone number</label>
+              <input
+                type="number"
+                class="number inputs"
+                placeholder="+ 1 234 567 890"
+              />
+            </div>
+            <button class="btn next1">next step</button>
+          </fieldset>
+
+          <fieldset class="select-plan hide">
+            <h1 class="headers">Select your plan</h1>
+            <p>You have the option of monthly or yearly billing.</p>
+            <div class="plans" id="monthly">
+              <div class="arcade">
+                <div class="icon">
+                  <img src="/assets/images/icon-arcade.svg" alt="" />
+                </div>
+                <div class="plans-text">
+                  <h3>arcade</h3>
+                  <p>$9/mo</p>
+                </div>
+              </div>
+              <div class="advanced">
+                <div class="icon">
+                  <img src="/assets/images/icon-advanced.svg" alt="" />
+                </div>
+                <div class="plans-text">
+                  <h3>advanced</h3>
+                  <p>$12/mo</p>
+                </div>
+              </div>
+              <div class="pro">
+                <div class="icon">
+                  <img src="/assets/images/icon-pro.svg" alt="" />
+                </div>
+                <div class="plans-text">
+                  <h3>pro</h3>
+                  <p>$15/mo</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="year-plans hide" id="yearly">
+              <div class="arcade" id="year-arcade">
+                <div class="icon">
+                  <img src="/assets/images/icon-arcade.svg" alt="" />
+                </div>
+                <div class="plans-text">
+                  <h3>arcade</h3>
+                  <p>$9/mo</p>
+                  <p class="bon">2 months free</p>
+                </div>
+              </div>
+              <div class="advanced" id="year-advanced">
+                <div class="icon">
+                  <img src="/assets/images/icon-advanced.svg" alt="" />
+                </div>
+                <div class="plans-text">
+                  <h3>advanced</h3>
+                  <p>$12/mo</p>
+                  <p class="bon">2 months free</p>
+                </div>
+              </div>
+              <div class="pro" id="year-pro">
+                <div class="icon">
+                  <img src="/assets/images/icon-pro.svg" alt="" />
+                </div>
+                <div class="plans-text">
+                  <h3>pro</h3>
+                  <p>$15/mo</p>
+                  <p class="bon">2 months free</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="plan-toggle">
+              <div class="toggle-container">
+                <p class="monthly-toggle">monthly</p>
+                <!-- <p class="toggle">toggle</p> -->
+                <label for="myToggle" class="toggle">
+                  <input type="checkbox" id="myToggle" class="toggle__input" />
+                  <div class="toggle__fill"></div>
+                </label>
+                <p class="yearly-toggle">yearly</p>
+              </div>
+            </div>
+
+            <button class="btn back-btn back1">go back</button>
+            <button class="btn">next</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
