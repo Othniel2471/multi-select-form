@@ -271,6 +271,12 @@ label {
   font-weight: bold;
   transition: 0.5s;
 }
+/* error */
+.error {
+  /* border: 1px solid var(--Strawberryred); */
+  font-size: 10px;
+  color: var(--Strawberryred);
+}
 
 /* media querries */
 @media only screen and (max-width: 600px) {
