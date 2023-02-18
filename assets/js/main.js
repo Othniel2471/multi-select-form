@@ -12,57 +12,13 @@ const planToggle = document.querySelector(".toggle");
 
 const monthPlan = document.querySelector(".plans");
 const yearPlan = document.querySelector(".year-plans");
+const planOptions = document.querySelectorAll(".plan");
+const nextBtn2 = document.querySelector(".next2");
 
 const stepOne = document.querySelector("#step-one");
 const stepTwo = document.querySelector("#step-two");
 const stepThree = document.querySelector("#step-three");
 const stepFour = document.querySelector("#step-four");
-
-// function validatePersonalInfo() {
-//   const name = nameInput.value.trim();
-//   const email = emailInput.value.trim();
-//   const number = numberInput.value.trim();
-
-//   if (name === "") {
-//     alert("Please enter your name");
-//     return false;
-//   }
-
-//   if (!isValidEmail(email)) {
-//     alert("Please enter a valid email address");
-//     return false;
-//   }
-
-//   if (!isValidPhoneNumber(number)) {
-//     alert("Please enter a valid phone number");
-//     return false;
-//   }
-
-//   return true;
-// }
-
-// function isValidEmail(email) {
-//   // Regular expression to validate email format
-//   const emailRegex = /\S+@\S+\.\S+/;
-//   return emailRegex.test(email);
-// }
-
-// function isValidPhoneNumber(number) {
-//   // Regular expression to validate phone number format
-//   const phoneRegex = /^\d{10}$/;
-//   return phoneRegex.test(number);
-// }
-
-// nextBtn1.addEventListener("click", (e) => {
-//   e.preventDefault();
-
-//   if (validatePersonalInfo()) {
-//     personalInfo.classList.add("hide");
-//     selectPlan.classList.remove("hide");
-//     stepOne.classList.remove("active");
-//     stepTwo.classList.add("active");
-//   }
-// });
 
 const validatePersonalInfo = () => {
   let valid = true;
@@ -136,7 +92,7 @@ const isValidEmail = (email) => {
 };
 
 const isValidPhoneNumber = (number) => {
-  const numberRegex = /^[0-9]{10}$/;
+  const numberRegex = /^[0-9]{11}$/;
   return numberRegex.test(number);
 };
 
@@ -170,8 +126,48 @@ const togglePlans = () => {
 };
 planToggle.addEventListener("change", togglePlans);
 
-const arcardMonth = document
-  .querySelector(".arcade")
-  .addEventListener("click", () => {
-    console.log(arcardMonth.innerHTML);
+const arcade = document.querySelectorAll(".arcade");
+arcade.forEach((e) => {
+  e.addEventListener("click", () => {
+    const content = e.textContent.trim();
+    // e.classList.toggle("active2");
+    console.log(content);
   });
+});
+
+const advanced = document.querySelectorAll(".advanced");
+advanced.forEach((e) => {
+  e.addEventListener("click", () => {
+    const content = e.textContent.trim();
+    // e.classList.toggle("active2");
+    console.log(content);
+  });
+});
+
+const pro = document.querySelectorAll(".pro");
+pro.forEach((e) => {
+  e.addEventListener("click", () => {
+    const content = e.textContent.trim();
+    // e.classList.toggle("active2");
+    console.log(content);
+  });
+});
+
+planOptions.forEach((plan) => {
+  nextBtn2.disabled = true;
+  plan.addEventListener("click", () => {
+    planOptions.forEach((otherPlan) => {
+      otherPlan.classList.remove("selected");
+    });
+    plan.classList.add("selected");
+    nextBtn2.disabled = false;
+  });
+});
+
+nextBtn2.addEventListener("click", (e) => {
+  e.preventDefault();
+  alert("next step");
+  selectPlan.classList.add("hide");
+  stepTwo.classList.remove("active");
+  stepThree.classList.add("active");
+});

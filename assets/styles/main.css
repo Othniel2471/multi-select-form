@@ -271,6 +271,9 @@ label {
   font-weight: bold;
   transition: 0.5s;
 }
+.active2 {
+  border: 1px solid var(--Purplishblue);
+}
 /* error */
 .error {
   /* border: 1px solid var(--Strawberryred); */

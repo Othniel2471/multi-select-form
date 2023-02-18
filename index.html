@@ -48,6 +48,7 @@
           </div>
         </div>
       </div>
+
       <div class="form-container">
         <form action="">
           <fieldset class="personal-info hide">
@@ -78,11 +79,11 @@
             <button class="btn next1">next step</button>
           </fieldset>
 
-          <fieldset class="select-plan">
+          <fieldset class="select-plan hide">
             <h1 class="headers">Select your plan</h1>
             <p>You have the option of monthly or yearly billing.</p>
             <div class="plans" id="monthly">
-              <div class="arcade">
+              <div class="arcade plan" id="arcade-month">
                 <div class="icon">
                   <img src="/assets/images/icon-arcade.svg" alt="" />
                 </div>
@@ -91,7 +92,7 @@
                   <p>$9/mo</p>
                 </div>
               </div>
-              <div class="advanced">
+              <div class="advanced plan">
                 <div class="icon">
                   <img src="/assets/images/icon-advanced.svg" alt="" />
                 </div>
@@ -100,7 +101,7 @@
                   <p>$12/mo</p>
                 </div>
               </div>
-              <div class="pro">
+              <div class="pro plan">
                 <div class="icon">
                   <img src="/assets/images/icon-pro.svg" alt="" />
                 </div>
@@ -112,7 +113,7 @@
             </div>
 
             <div class="year-plans hide" id="yearly">
-              <div class="arcade" id="year-arcade">
+              <div class="arcade plan" id="year-arcade">
                 <div class="icon">
                   <img src="/assets/images/icon-arcade.svg" alt="" />
                 </div>
@@ -122,7 +123,7 @@
                   <p class="bon">2 months free</p>
                 </div>
               </div>
-              <div class="advanced" id="year-advanced">
+              <div class="advanced plan" id="year-advanced">
                 <div class="icon">
                   <img src="/assets/images/icon-advanced.svg" alt="" />
                 </div>
@@ -132,7 +133,7 @@
                   <p class="bon">2 months free</p>
                 </div>
               </div>
-              <div class="pro" id="year-pro">
+              <div class="pro plan" id="year-pro">
                 <div class="icon">
                   <img src="/assets/images/icon-pro.svg" alt="" />
                 </div>
@@ -157,7 +158,17 @@
             </div>
 
             <button class="btn back-btn back1">go back</button>
-            <button class="btn">next</button>
+            <button class="btn next2">next</button>
+          </fieldset>
+
+          <fieldset class="add-ons">
+            <h1 class="headers">pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience</p>
+            <div class="add-ons-container">
+              <div class="online"></div>
+              <div class="larger"></div>
+              <div class="customizabele"></div>
+            </div>
           </fieldset>
         </form>
       </div>
