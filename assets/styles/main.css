@@ -91,7 +91,7 @@ p {
   justify-content: space-between;
 }
 .sidebar {
-  background-image: url(/assets/images/bg-sidebar-desktop.svg);
+  background-image: url(../images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
   background-size: contain;
   height: 500px;
@@ -396,7 +396,7 @@ label {
   .sidebar {
     height: 100px;
     width: 100%;
-    background-image: url(/assets/images/bg-sidebar-mobile.svg);
+    background-image: url(../images/bg-sidebar-mobile.svg);
     /* background-position: center; */
     background-size: cover;
   }
