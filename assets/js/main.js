@@ -1,10 +1,11 @@
 const form = document.querySelector("form");
-const personalInfo = document.querySelector(".personal-info");
 const nameInput = document.querySelector(".name");
 const emailInput = document.querySelector(".email");
 const numberInput = document.querySelector(".number");
 
+const personalInfo = document.querySelector(".personal-info");
 const selectPlan = document.querySelector(".select-plan");
+const addOns = document.querySelector(".add-on");
 
 const nextBtn1 = document.querySelector(".next1");
 const backBtn1 = document.querySelector(".back1");
@@ -14,6 +15,9 @@ const monthPlan = document.querySelector(".plans");
 const yearPlan = document.querySelector(".year-plans");
 const planOptions = document.querySelectorAll(".plan");
 const nextBtn2 = document.querySelector(".next2");
+
+const nextBtn3 = document.querySelector(".next3");
+const backBtn2 = document.querySelector(".back2");
 
 const stepOne = document.querySelector("#step-one");
 const stepTwo = document.querySelector("#step-two");
@@ -115,6 +119,16 @@ backBtn1.addEventListener("click", (e) => {
   stepTwo.classList.remove("active");
 });
 
+nextBtn3.addEventListener("click", () => {
+  // selectPlan.classList.add('hide')
+  addOns.classList.add("hide");
+});
+backBtn2.addEventListener("click", (e) => {
+  e.preventDefault();
+  addOns.classList.add("hide");
+  selectPlan.classList.remove("hide");
+});
+
 const togglePlans = () => {
   if (yearPlan.classList.contains("hide")) {
     yearPlan.classList.remove("hide");
@@ -170,4 +184,5 @@ nextBtn2.addEventListener("click", (e) => {
   selectPlan.classList.add("hide");
   stepTwo.classList.remove("active");
   stepThree.classList.add("active");
+  addOns.classList.remove("hide");
 });
