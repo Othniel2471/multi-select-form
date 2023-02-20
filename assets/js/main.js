@@ -5,7 +5,7 @@ const numberInput = document.querySelector(".number");
 
 const personalInfo = document.querySelector(".personal-info");
 const selectPlan = document.querySelector(".select-plan");
-const addOns = document.querySelector(".add-on");
+const addOns = document.querySelector(".add-ons");
 
 const nextBtn1 = document.querySelector(".next1");
 const backBtn1 = document.querySelector(".back1");
@@ -180,7 +180,7 @@ planOptions.forEach((plan) => {
 
 nextBtn2.addEventListener("click", (e) => {
   e.preventDefault();
-  alert("next step");
+  // alert("next step");
   selectPlan.classList.add("hide");
   stepTwo.classList.remove("active");
   stepThree.classList.add("active");
